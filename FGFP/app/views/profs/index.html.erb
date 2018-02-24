@@ -21,7 +21,7 @@
         <td><%= prof.email %></td>
         <td><%= prof.interests %></td>
         <td><%= prof.office %></td>
-        <td><%= prof.department %></td>
+        <td><%= prof.department.name %></td>
         <td><%= link_to 'Show', prof %></td>
         <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
         <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>

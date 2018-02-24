@@ -1,0 +1,18 @@
+$navbar-background-color: rgb(234, 170, 0);
+@import "bulma";
+
+/* universal */
+
+.navbar-item {
+    font-size: 20px;
+    color:black;
+}
+
+.mentor-text {
+    font-size: 25px;
+    font-family: Verdana
+}
+
+.footer-text{
+    font-size: 16px;
+}
