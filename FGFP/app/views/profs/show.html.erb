@@ -1,29 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="img">
+    <img src="https://bulma.io/images/placeholders/64x64.png" height="230" width="230">
+  </div>
+  <div class="title">
+    <p>
+      <strong>Name:</strong>
+      <%= @prof.name %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @prof.name %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @prof.email %>
+    </p>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @prof.email %>
-</p>
+  <div class="description">
+    <p>
+      <strong>Interests:</strong>
+      <%= @prof.interests %>
+    </p>
 
-<p>
-  <strong>Interests:</strong>
-  <%= @prof.interests %>
-</p>
+    <p>
+      <strong>Office:</strong>
+      <%= @prof.office %>
+    </p>
 
-<p>
-  <strong>Office:</strong>
-  <%= @prof.office %>
-</p>
+    <p>
+      <strong>Department:</strong>
+      <%= @prof.department %>
+    </p>
+  </div>
+</div>​
 
-<p>
-  <strong>Department:</strong>
-  <%= @prof.department %>
-</p>
+
 
 <%= link_to 'Edit', edit_prof_path(@prof) %> |
 <%= link_to 'Back', profs_path %>
