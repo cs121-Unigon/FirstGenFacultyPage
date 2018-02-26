@@ -1,113 +1,51 @@
-<!-- <p id="notice"><%= notice %></p>
-<h1>Profs</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Interests</th>
-      <th>Office</th>
-      <th>Department</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead> -->
-
-
 <section class="section">
   <div class="container">
     <div class="columns">
-       <!--- MISSING RENDER LINE HERE -->
-
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">
           <div class="tile">
-
             <div class="tile is-parent">
             <article class="tile is-child notification is-primary">
               <p class="title">Welcome from OID!</p>
               <p class="subtitle">TEXT OID PROVIDES</p>
               <div class="content">
-                <!-- Content -->
               </div>
             </article>
-           <!--  <article class="tile is-child notification is-warning">
-                <p class="title">...tiles</p>
-                <p class="subtitle">Top tile</p>
-              </article> -->
           </div>
-
           </div>
-
           <div class="tile is-parent">
             <article class="tile is-child notification is-danger">
               <p class="title">Faculty:</p>
               <p class="subtitle">Aligned with the right tile</p>
+              <table style="width:100%">
+                <% @profs.each do |prof| %>
+                  <tr>
+                    <td><%= prof.name %></td>
+                    <td><%= prof.email %></td>
+                    <td><%= link_to 'Show', prof %></td>
+                    <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
+                    <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </table>
               <div class="content">
-                <!-- Content -->
               </div>
             </article>
           </div>
-
-          <!-- <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-danger">
-                <p class="title">Vertical...</p>
-                <p class="subtitle">Top tile</p>
-              </article>
-            </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-info">
-              <p class="title">Middle tile</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-              </figure>
-            </article>
-          </div> -->
-
         </div>
-
         <div class="tile is-parent">
           <article class="tile is-child notification is-success">
             <div class="content">
               <p class="title">Tall tile</p>
               <p class="subtitle">With even more content</p>
               <div class="content">
-                <!-- Content -->
               </div>
             </div>
           </article>
         </div>
-
-
-
-
       </div>
-
-
     </div>
   </div>
 </section>
 
-
-<tbody>
-    <% @profs.each do |prof| %>
-      <tr>
-        <td><%= prof.name %></td>
-        <td><%= prof.email %></td>
-        <td><%= link_to 'Show', prof %></td>
-        <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
-        <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Prof', new_prof_path %>
-
-
-
-
-
-<!-- 39:10 -->
+<%= link_to 'Sign up', new_prof_path %>
