@@ -2,7 +2,7 @@
   <div class="img">
     <img src="https://bulma.io/images/placeholders/64x64.png" height="230" width="230">
   </div>
-  <div class="title">
+  <div class="header">
     <p>
       <strong>Name:</strong>
       <%= @prof.name %>
@@ -12,6 +12,12 @@
       <strong>Email:</strong>
       <%= @prof.email %>
     </p>
+
+    <p>
+      <strong>Office:</strong>
+      <%= @prof.office %>
+    </p>
+
   </div>
 
   <div class="description">
@@ -21,16 +27,13 @@
     </p>
 
     <p>
-      <strong>Office:</strong>
-      <%= @prof.office %>
-    </p>
-
-    <p>
       <strong>Department:</strong>
       <%= @prof.department %>
     </p>
   </div>
 </div>​
+
+
 
 
 
