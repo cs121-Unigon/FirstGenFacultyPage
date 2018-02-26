@@ -1,7 +1,5 @@
 <!-- <p id="notice"><%= notice %></p>
-
 <h1>Profs</h1>
-
 <table>
   <thead>
     <tr>
@@ -96,9 +94,6 @@
       <tr>
         <td><%= prof.name %></td>
         <td><%= prof.email %></td>
-        <td><%= prof.interests %></td>
-        <td><%= prof.office %></td>
-        <td><%= prof.department %></td>
         <td><%= link_to 'Show', prof %></td>
         <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
         <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
