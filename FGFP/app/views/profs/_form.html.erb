@@ -31,10 +31,19 @@
     <%= form.text_field :office, id: :prof_office %>
   </div>
 
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :avatar %>  
+  </div>
+
   <div class="field">
     <%= form.label :department_id %>
-    <%= form.text_field :department_id, id: :prof_department_id %>
+    <div class="controls">
+      <%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true, class:'select' ) %>
+    </div>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
