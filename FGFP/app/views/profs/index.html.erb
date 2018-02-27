@@ -2,6 +2,7 @@
 
 <!-- <h1>Profs</h1> -->
 
+
 <table>
   <thead>
     <tr>
@@ -64,23 +65,18 @@ Sed porta eros ex, in dapibus ligula condimentum vel. Donec fringilla dui at era
 
 <tbody>
     <% @profs.each do |prof| %>
-        <tr>
-          <td><%= prof.name %></td>
-          <td><%= prof.email %></td>
-          <td><%= prof.interests %></td>
-          <td><%= prof.office %></td>
-          <td><%= prof.department %></td>
-          <td><%= link_to 'Show', prof %></td>
-          <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
-          <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
+
+      <tr>
+        <td><%= prof.name %></td>
+        <td><%= prof.email %></td>
+        <td><%= link_to 'Show', prof %></td>
+        <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
+        <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
   </tbody>
 
 </table>
 <br>
 
 <%= link_to 'New Prof', new_prof_path %>
-
-
-<!-- 39:10 -->
