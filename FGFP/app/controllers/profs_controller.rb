@@ -15,6 +15,7 @@ class ProfsController < ApplicationController
   # GET /profs/new
   def new
     @prof = Prof.new
+    @departments = Department.all
   end
 
   # GET /profs/1/edit
@@ -25,6 +26,9 @@ class ProfsController < ApplicationController
   # POST /profs.json
   def create
     @prof = Prof.new(prof_params)
+    
+    # Get a list of department so they can be in the dropdown menu
+    #@departments = Departments.all
 
     respond_to do |format|
       if @prof.save
@@ -69,6 +73,6 @@ class ProfsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prof_params
-      params.require(:prof).permit(:name, :email, :interests, :office, :department_id)
+      params.require(:prof).permit(:name, :email, :interests, :office, :department_id, :avatar)
     end
 end
