@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to "HMC-Mentor", root_path, class:"navbar-item mentor-text", style: "color:black" %>
+   
+    <div class="navbar-burger burger"  id="nav-toggle" data-target="navbarMenu">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="navbar-menu navbar-end" id="navbarMenu" >
+    <!-- navbar start, navbar end -->
+    <div class="navbar-item">
+      <%= link_to "Log In", "#", class:"button", style: "color:black" %>
+    </div>
+
+    <div class="navbar-item">
+      <%= link_to "Sign Up", new_path, class:"button", style: "color:black" %>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  document.getElementById("nav-toggle").addEventListener("click", toggleNav);
+  function toggleNav() {
+  var nav = document.getElementById("navbarMenu");
+  var className = nav.getAttribute("class");
+  if(className == "navbar-menu") {
+  nav.className = "navbar-menu is-active";
+  } else {
+  nav.className = "navbar-menu";
+  }
+  }
+</script>
+

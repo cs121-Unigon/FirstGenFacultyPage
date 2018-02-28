@@ -28,14 +28,10 @@
 
     <p>
       <strong>Department:</strong>
-      <%= @prof.department %>
+      <%= @prof.department.name %>
     </p>
   </div>
 </div>​
-
-
-
-
 
 <%= link_to 'Edit', edit_prof_path(@prof) %> |
 <%= link_to 'Back', profs_path %>

@@ -1,51 +1,67 @@
-<%= form_with(model: prof, local: true) do |form| %>
-  <% if prof.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(prof.errors.count, "error") %> prohibited this prof from being saved:</h2>
+<div class="container">
+	<h1 class="title">
+		Prof Sign Up
+	</h1>
+	<%= form_with(model: prof, local: true, html: { class: "container is-widescreen form" }) do |form| %>
+	  <% if prof.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(prof.errors.count, "error") %> prohibited this prof from being saved:</h2>
 
-      <ul>
-      <% prof.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :prof_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :prof_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :interests %>
-    <%= form.text_area :interests, id: :prof_interests %>
-  </div>
-
-  <div class="field">
-    <%= form.label :office %>
-    <%= form.text_field :office, id: :prof_office %>
-  </div>
+		  <ul>
+		  <% prof.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		  <% end %>
+		  </ul>
+		</div>
+	  <% end %>
 
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :avatar %>  
-  </div>
+	  <div class="tile is-ancestor">
+		<div class="tile is-12 is-parent">
+			<div class="tile is-child box">
+				<div class="field">
+					<%= form.text_field :name, id: :prof_name, class: "input is-info", placeholder: "Name"%>
+				</div>
+				<div class="field">
+					<%= form.text_field :email, id: :prof_email, class: "input is-info", placeholder: "Email" %>
+				</div>
 
-  <div class="field">
-    <%= form.label :department_id %>
-    <div class="controls">
-      <%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true, class:'select' ) %>
-    </div>
-  </div>
+				<div class="field">
+					<%= form.text_field :office, id: :prof_office, class: "input is-info", placeholder: "Office" %>
+				</div>
 
+				<div class="field">
+					<%= form.label :department_id, class: "label"%>
+					<div class="controls">
+						<div class="select">
+							<%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true) %>
+						</div>
+					</div>
+				</div>
+			</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+			<div class="tile is-child box">
+				<div class="field">
+					<%= form.label :picture %>
+					<%= form.file_field :avatar %>  
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="tile is-ancestor">
+		<div class="tile is-12 is-parent">
+			<div class="tile is-child box">
+				<div class="field">
+					<%= form.text_area :interests, id: :prof_interests, class: "textarea is-info", placeholder: "Interests" %>
+				</div>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="actions">
+		<%= form.submit class: "button is-link" %>
+	  </div>
+	<% end %>
+
+</div>
