@@ -31,13 +31,19 @@
 				</div>
 
 				<div class="field">
-					<%= form.text_field :department_id, id: :prof_department_id, class: "input is-info", placeholder: "Department id" %>
+					<%= form.label :department_id, class: "label"%>
+					<div class="controls">
+						<div class="select">
+							<%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true) %>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="tile is-child box">
 				<div class="field">
-					<input name="#" type="file">
+					<%= form.label :picture %>
+					<%= form.file_field :avatar %>  
 				</div>
 			</div>
 		</div>
@@ -59,4 +65,3 @@
 	<% end %>
 
 </div>
-
