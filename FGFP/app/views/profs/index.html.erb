@@ -18,14 +18,32 @@
 <section class="section">
   <div class="container">
     <div class="columns">
-       <!--- MISSING RENDER LINE HERE -->
+
+
+      <div class="tile is-vertical is-12">
+          <!-- <div class="tile"> -->
+            <!-- <div class="tile is-parent"> -->
+            <div class="tile is-child notification is-warning">
+              <!-- <div class="media-top"> -->
+                <figure class="image">
+                  <img src="http://www.inwk.com/wp-content/uploads/2014/09/600x200.gif"> 
+                </figure>
+              <!-- </div> -->
+            </div>
+          </div>
+          <!-- </div> -->
+          </div>
+
+
 
       <div class="tile is-ancestor">
+
+
         <div class="tile is-vertical is-8">
-          <div class="tile">
+          <!-- <div class="tile"> -->
 
             <div class="tile is-parent">
-            <article class="tile is-child notification is-primary">
+            <div class="tile is-child notification">
               <p class="title">Welcome from OID!</p>
               <p class="subtitle">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla luctus metus, et fringilla mi accumsan nec. Maecenas volutpat, augue sed eleifend cursus, turpis dolor sodales est, ultricies efficitur lacus mauris dapibus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed convallis lacus a turpis auctor, sed pharetra ipsum luctus. In pellentesque sem ante, et interdum metus eleifend et. Sed consequat ultrices condimentum. Donec nec tortor ac ex lobortis cursus. Praesent condimentum dui ac luctus mollis. Fusce sapien erat, commodo ut cursus ornare, ultricies at eros. Sed sollicitudin felis id varius pulvinar. Fusce sit amet tortor velit. Donec euismod urna at pulvinar semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce vitae ornare lacus. Pellentesque elementum auctor justo, at volutpat ipsum. Morbi scelerisque pharetra iaculis.
@@ -36,16 +54,16 @@ Sed porta eros ex, in dapibus ligula condimentum vel. Donec fringilla dui at era
               <div class="content">
                 <!-- Content -->
               </div>
-            </article>
-          </div>
+            </div>
+          <!-- </div> -->
           </div>
             <%= render 'display' %>
           </div>
 
           <div class="tile is-parent">
-            <article class="tile is-child notification is-success">
+            <article class="tile is-child notification is-dark">
               <div class="content">
-                <p class="title">Tall tile</p>
+                <p class="title">Features</p>
                 <p class="subtitle">With even more content</p>
                 <div class="content">
                   <!-- Content -->
@@ -53,29 +71,10 @@ Sed porta eros ex, in dapibus ligula condimentum vel. Donec fringilla dui at era
               </div>
             </article>
           </div>
-
-
       </div>
-      
-
-    </div>
+    <!-- </div> -->
   </div>
 </section>
 
-<tbody>
-    <% @profs.each do |prof| %>
 
-      <tr>
-        <td><%= prof.name %></td>
-        <td><%= prof.email %></td>
-        <td><%= link_to 'Show', prof %></td>
-        <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
-        <td><%= link_to 'Destroy', prof, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
 
-</table>
-<br>
-
-<%= link_to 'New Prof', new_prof_path %>
