@@ -15,9 +15,13 @@
 							</div>
 							<div class="media-content">
 								<div class="content">
-				 					<strong><%= prof.name %></strong><br />
+									<%= link_to(prof) do %>
+									  <strong><%= prof.name %></strong> 
+									<% end %>
+				 					<!-- <strong> <%= prof.name %></strong><br /> -->
 				 				</div>
 								<div class="content">
+									<small><%= link_to 'Show', prof %></td>
 									<small>Department: <%= prof.department.name %></small><br /> 
 									<small>Office: <%= prof.office %></small><br /> 
 									<small>email: <%= prof.email %></small><br /> 
