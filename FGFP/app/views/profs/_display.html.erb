@@ -1,16 +1,8 @@
 <div class="tile is-parent">
-	<article class="tile is-child notification is-danger">
+	<article class="tile is-child notification is-warning">
 	  <p class="title">Faculty:</p>
-	  <p class="subtitle">Aligned with the right tile</p>
 	  <div class="content">
-	    <!-- Content -->
-	    <article class="media box">
-			<!-- <figure class="media-left">
-				<p class="image is-64x64">
-					<img src="https://cdn3.iconfinder.com/data/icons/faticons/32/picture-01-512.png">
-				</p>
-
-			</figure> -->
+	    <article class="media box notification">
 			<div class="media-content">
 				<% @profs.each do | prof | %>
 					<div class="box">
@@ -23,11 +15,15 @@
 							<div class="media-content">
 								<div class="content">
 				 					<strong>Sample Name</strong><br />
-				 					<small>sampleProf</small><br /> 
 				 				</div>
 								<div class="content">
-
+									<small>Department</small><br /> 
+									<small>Office</small><br /> 
+									<small>email</small><br /> 
 								</div>
+
+
+								<!-- not sure what this does -->
 								<nav class="level">
 									<div class="level-left is-mobile">
 										<%= link_to prof, class: "level-item" do %>
@@ -38,6 +34,7 @@
 
 									</div>
 								</nav>
+
 
 
 							</div> 
