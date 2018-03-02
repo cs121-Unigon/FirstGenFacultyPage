@@ -9,17 +9,21 @@
 						<article class="media">
 							<div class="media-top">
 								<figure class="image is-64x64">
-									<img src="https://bulma.io/images/placeholders/64x64.png"> 
+									<%= image_tag prof.avatar.url %>
+									<!-- <img src="https://bulma.io/images/placeholders/64x64.png"> -->
 								</figure>
 							</div>
 							<div class="media-content">
 								<div class="content">
-				 					<strong>Sample Name</strong><br />
+									<%= link_to(prof) do %>
+									  <strong><%= prof.name %></strong> 
+									<% end %>
+				 					<!-- <strong> <%= prof.name %></strong><br /> -->
 				 				</div>
 								<div class="content">
-									<small>Department</small><br /> 
-									<small>Office</small><br /> 
-									<small>email</small><br /> 
+									<small>Department: <%= prof.department.name %></small><br /> 
+									<small>Office: <%= prof.office %></small><br /> 
+									<small>email: <%= prof.email %></small><br /> 
 								</div>
 
 
