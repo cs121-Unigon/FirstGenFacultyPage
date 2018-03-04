@@ -1,64 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-
 <section class="section">
   <div class="container">
-    <div class="columns">
-
-
-      <div class="tile is-vertical is-12">
-          <!-- <div class="tile"> -->
-            <!-- <div class="tile is-parent"> -->
-            <div class="tile is-child notification is-warning">
-              <!-- <div class="media-top"> -->
-                <figure class="image">
-                  <img src="https://www.inwk.com/wp-content/uploads/2014/09/600x200.gif"> 
-                </figure>
-              <!-- </div> -->
-            </div>
-          </div>
-          <!-- </div> -->
-          </div>
-
-
-
-      <div class="tile is-ancestor">
-
-
-        <div class="tile is-vertical is-9">
-          <!-- <div class="tile"> -->
-
-            <div class="tile is-parent">
-            <div class="tile is-child notification">
-              <p class="title">Welcome from OID!</p>
-              <p class="subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla luctus metus, et fringilla mi accumsan nec. Maecenas volutpat, augue sed eleifend cursus, turpis dolor sodales est, ultricies efficitur lacus mauris dapibus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed convallis lacus a turpis auctor, sed pharetra ipsum luctus. In pellentesque sem ante, et interdum metus eleifend et. Sed consequat ultrices condimentum. Donec nec tortor ac ex lobortis cursus. Praesent condimentum dui ac luctus mollis. Fusce sapien erat, commodo ut cursus ornare, ultricies at eros. Sed sollicitudin felis id varius pulvinar. Fusce sit amet tortor velit. Donec euismod urna at pulvinar semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce vitae ornare lacus. Pellentesque elementum auctor justo, at volutpat ipsum. Morbi scelerisque pharetra iaculis.
-
-Sed porta eros ex, in dapibus ligula condimentum vel. Donec fringilla dui at erat mollis varius. Sed pretium tortor dui, et efficitur risus facilisis a. Nullam nisi justo, interdum non libero non, sollicitudin pharetra elit. Morbi eu felis sit amet ipsum viverra faucibus. Vestibulum blandit fermentum feugiat. Sed ullamcorper augue a maximus tempor. Curabitur blandit ex eu purus dictum faucibus. Etiam et dui eget libero convallis pellentesque.
-                
-                </p>
-              <div class="content">
-                <!-- Content -->
-              </div>
-            </div>
-          <!-- </div> -->
-          </div>
-            <%=	render 'display' %>
-          </div>
-
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-dark">
-              <div class="content">
-                <p class="title">Features</p>
-                <p class="subtitle">With even more content</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
-            </article>
-          </div>
+    <div class="tile pic-title">
+      <%= render 'mainpic' %>
+    </div>
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-9">
+        <%= render 'welcome' %>
+        <%=	render 'display' %>
       </div>
-    <!-- </div> -->
+      <%= render 'features' %>
   </div>
 </section>
 

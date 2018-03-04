@@ -8,24 +8,23 @@
 					<div class="box">
 						<article class="media">
 							<div class="media-top">
-								<figure class="image is-64x64">
-									<%= image_tag prof.avatar.url %>
-									<!-- <img src="https://bulma.io/images/placeholders/64x64.png"> -->
-								</figure>
+								<div class="tile images">
+									<figure class="image is-64x64">
+										<%= image_tag prof.avatar.url %>
+									</figure>
+								</div>
 							</div>
 							<div class="media-content">
 								<div class="content">
 									<%= link_to(prof) do %>
 									  <strong><%= prof.name %></strong> 
 									<% end %>
-				 					<!-- <strong> <%= prof.name %></strong><br /> -->
 				 				</div>
 								<div class="content">
 									<small>Department: <%= prof.department.name %></small><br /> 
 									<small>Office: <%= prof.office %></small><br /> 
 									<small>email: <%= prof.email %></small><br /> 
 								</div>
-
 
 								<!-- not sure what this does -->
 								<nav class="level">
@@ -38,9 +37,6 @@
 
 									</div>
 								</nav>
-
-
-
 							</div> 
 						</article>
 					</div>
