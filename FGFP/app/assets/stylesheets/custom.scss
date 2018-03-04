@@ -9,10 +9,6 @@
     font-family: Verdana
 }
 
-.footer-text{
-    font-size: 16px;
-}
-
 .is-ancestor{
     margin-top: 10px;
 }
@@ -23,4 +19,15 @@
 
 .title {
     margin-top: 10px;
+}
+
+.bottom-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.25em;
+    line-height: 3.25em;
+    background-color: rgb(234, 170, 0);
+    text-align: center;
 }
