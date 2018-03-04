@@ -20,20 +20,20 @@
 		<div class="tile is-12 is-parent">
 			<div class="tile is-child box">
 				<div class="field">
-					<%= form.text_field :name, id: :prof_name, class: "input is-info", placeholder: "Name"%>
+					<%= form.text_field :name, id: :prof_name, class: "input is-warning", placeholder: "Name"%>
 				</div>
 				<div class="field">
-					<%= form.text_field :email, id: :prof_email, class: "input is-info", placeholder: "Email" %>
+					<%= form.text_field :email, id: :prof_email, class: "input is-warning", placeholder: "Email" %>
 				</div>
 
 				<div class="field">
-					<%= form.text_field :office, id: :prof_office, class: "input is-info", placeholder: "Office" %>
+					<%= form.text_field :office, id: :prof_office, class: "input is-warning", placeholder: "Office" %>
 				</div>
 
 				<div class="field">
 					<%= form.label :department_id, class: "label"%>
 					<div class="controls">
-						<div class="select">
+						<div class="select is-warning">
 							<%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true) %>
 						</div>
 					</div>
@@ -41,10 +41,22 @@
 			</div>
 
 			<div class="tile is-child box">
-				<div class="field">
-					<%= form.label :picture %>
-					<%= form.file_field :avatar %>  
-				</div>
+        <div class="field">
+          <div class="file is-centered is-boxed is-large is-fullwidth is-warning">
+            <label class="file-label">
+              
+              <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label" style="text-align: center">
+                    Drag Profile Picture
+                  </span>
+                </span>
+              <%= form.file_field :avatar%>
+            </label>
+          </div>
+        </div>
 			</div>
 		</div>
 	  </div>
@@ -53,7 +65,7 @@
 		<div class="tile is-12 is-parent">
 			<div class="tile is-child box">
 				<div class="field">
-					<%= form.text_area :interests, id: :prof_interests, class: "textarea is-info", placeholder: "Interests" %>
+					<%= form.text_area :interests, id: :prof_interests, class: "textarea is-warning", placeholder: "Interests" %>
 				</div>
 			</div>
 		</div>
