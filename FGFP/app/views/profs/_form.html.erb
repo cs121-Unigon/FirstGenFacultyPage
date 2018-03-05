@@ -1,51 +1,79 @@
-<%= form_with(model: prof, local: true) do |form| %>
-  <% if prof.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(prof.errors.count, "error") %> prohibited this prof from being saved:</h2>
+<div class="container">
+	<h1 class="title">
+		Prof Sign Up
+	</h1>
+	<%= form_with(model: prof, local: true, html: { class: "container is-widescreen form" }) do |form| %>
+	  <% if prof.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(prof.errors.count, "error") %> prohibited this prof from being saved:</h2>
 
-      <ul>
-      <% prof.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :prof_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :prof_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :interests %>
-    <%= form.text_area :interests, id: :prof_interests %>
-  </div>
-
-  <div class="field">
-    <%= form.label :office %>
-    <%= form.text_field :office, id: :prof_office %>
-  </div>
+		  <ul>
+		  <% prof.errors.full_messages.each do |message| %>
+			<li class="help is-danger"><%= message%></li>
+		  <% end %>
+		  </ul>
+		</div>
+	  <% end %>
 
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :avatar %>  
-  </div>
+	  <div class="tile is-ancestor">
+		<div class="tile is-12 is-parent">
+			<div class="tile is-child box">
+				<div class="field">
+					<%= form.text_field :name, id: :prof_name, class: "input is-warning", placeholder: "Name"%>
+				</div>
+				<div class="field">
+					<%= form.text_field :email, id: :prof_email, class: "input is-warning", placeholder: "Email" %>
+				</div>
 
-  <div class="field">
-    <%= form.label :department_id %>
-    <div class="controls">
-      <%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true, class:'select' ) %>
-    </div>
-  </div>
+				<div class="field">
+					<%= form.text_field :office, id: :prof_office, class: "input is-warning", placeholder: "Office" %>
+				</div>
 
+				<div class="field">
+					<%= form.label :department_id, class: "label"%>
+					<div class="controls">
+						<div class="select is-warning">
+							<%= collection_select(:prof, :department_id, Department.all, :id, :name, prompt:true) %>
+						</div>
+					</div>
+				</div>
+			</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+			<div class="tile is-child box">
+        <div class="field"  style="text-align: center">
+          <div class="file is-centered is-boxed is-large is-fullwidth is-warning">
+            <label class="file-label">
+              
+              <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Drag Profile Picture
+                  </span>
+                </span>
+              <%= form.file_field :avatar%>
+            </label>
+          </div>
+        </div>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="tile is-ancestor">
+		<div class="tile is-12 is-parent">
+			<div class="tile is-child box">
+				<div class="field">
+					<%= form.text_area :interests, id: :prof_interests, class: "textarea is-warning", placeholder: "Interests" %>
+				</div>
+			</div>
+		</div>
+	  </div>
+  
+	  <div class="actions">
+		<%= form.submit class: "button is-link" %>
+	  </div>
+	<% end %>
+
+</div>

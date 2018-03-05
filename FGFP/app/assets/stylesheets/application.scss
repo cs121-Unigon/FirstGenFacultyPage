@@ -13,5 +13,18 @@
  *= require_tree .
  *= require_self
  */
-
+$navbar-background-color: rgb(234, 170, 0);
 @import "bulma";
+
+
+/* round images */
+.images {
+	border-radius: 50%;
+	img {
+		border-radius: 50%;
+	}
+}
+
+.notification:not(:last-child) {
+	margin-bottom: 0;
+}
