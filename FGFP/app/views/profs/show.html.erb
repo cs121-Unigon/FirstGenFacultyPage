@@ -3,17 +3,17 @@
     <%= image_tag @prof.avatar.url %>
   </div>
   <div class="header">
-    <p>
+    <p class="subtitle">
       <strong>Name:</strong>
       <%= @prof.name %>
     </p>
 
-    <p>
+    <p class="subtitle">
       <strong>Email:</strong>
       <%= @prof.email %>
     </p>
 
-    <p>
+    <p class="subtitle">
       <strong>Office:</strong>
       <%= @prof.office %>
     </p>
@@ -21,17 +21,15 @@
   </div>
 
   <div class="description">
-    <p>
+    <p class="subtitle">
       <strong>Interests:</strong>
       <%= @prof.interests %>
     </p>
 
-    <p>
+    <p class="subtitle">
       <strong>Department:</strong>
       <%= @prof.department.name %>
     </p>
   </div>
 </div>​
 
-<%= link_to 'Edit', edit_prof_path(@prof) %> |
-<%= link_to 'Back', profs_path %>
