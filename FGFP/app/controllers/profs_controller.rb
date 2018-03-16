@@ -12,6 +12,9 @@ class ProfsController < ApplicationController
   def show
   end
 
+  def about 
+  end
+
   # GET /profs/new
   def new
     @prof = Prof.new
