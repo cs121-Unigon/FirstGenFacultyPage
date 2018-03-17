@@ -1,6 +1,12 @@
 class ProfsController < ApplicationController
   before_action :set_prof, only: [:show, :edit, :update, :destroy]
 
+
+  # GET /profs
+  # GET /profs.json
+  def testimonials
+  end
+
   # GET /profs
   # GET /profs.json
   def index
