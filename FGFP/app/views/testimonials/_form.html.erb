@@ -1,27 +1,34 @@
-<%= form_with(model: testimonial, local: true) do |form| %>
-  <% if testimonial.errors.any? %>
+<div class="container">
+  <h1 class="title">
+    Add your testimonial
+  </h1>
+
+  <%= form_with(model: testimonial, local: true, html: { class: "container is-widescreen form" }) do |form| %>
+    <% if testimonial.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(testimonial.errors.count, "error") %> prohibited this testimonial from being saved:</h2>
 
       <ul>
       <% testimonial.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li class="help is-danger"><%= message%></li>
       <% end %>
       </ul>
     </div>
+    <% end %>
+
+    <div class="tile is-ancestor">
+    <div class="tile is-12 is-parent">
+      <div class="tile is-child box notification is-warning">
+
+        <div class="field">
+          <%= form.label :comment %>
+          <%= form.text_field :comment, id: :testimonial_comment, class: "input is-warning" %>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="actions">
+    <%= form.submit class: "button is-link" %>
+    </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment, id: :testimonial_comment %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
-
-
-
-
+</div>
