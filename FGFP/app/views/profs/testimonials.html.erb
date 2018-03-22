@@ -1,11 +1,47 @@
-<div class="container">
-  <img src="bandmember.jpg" alt="Avatar" style="width:90px">
-  <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
-  <p>John Doe saved us from a web disaster.</p>
+
+
+<p id="notice"><%= notice %></p>
+
+<section class="section">
+  <div class="container">
+    
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile is-parent">
+	<article class="tile is-child notification is-warning">
+	  <p class="title">Here's what past participants have said:</p>
+	  <div class="content">
+	    <!-- <article class="media box notification"> -->
+	    <div class="media-content">
+			<% @testimonials.each do |testimonial| %>
+				<div class="box">
+					<article class="media">
+						<div class="media-top">
+							
+						</div>
+						<div class="media-content">
+							
+							<div class="content">
+								<small><%= testimonial.comment %></small><br /> 
+								
+							</div>
+
+							
+						</div> 
+					</article>
+				</div>
+			<% end %>
+		</div>
+			
+		<!-- </article> -->
+
+	  </div>
+	</article>
+	
 </div>
 
-<div class="container">
-  <img src="avatar_g2.jpg" alt="Avatar" style="width:90px">
-  <p><span >Rebecca Flex.</span> CEO at Company.</p>
-  <p>No one is better than John Doe.</p>
-</div>
+      </div>
+  </div>
+</section>
+
+
