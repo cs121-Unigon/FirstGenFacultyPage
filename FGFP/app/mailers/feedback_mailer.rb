@@ -3,6 +3,6 @@ class FeedbackMailer < ApplicationMailer
 
   def feedback_email(feedback)
 	@feedback = feedback
-	mail(to: ENV["to_gmail"], subject: "Feedback Posted")
+	mail(to: ENV["to_email"], subject: "Feedback Posted")
   end
 end

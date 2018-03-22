@@ -1,14 +1,22 @@
+<%= form_with(model: feedback, local: true) do |form| %>
+  <% if feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this department from being saved:</h2>
 
-<%= simple_form_for(@feedback) do |f| %>
-  <%= f.error_notification %>
+      <ul>
+      <% feedback.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <div class="form-inputs">
-
-    <%= f.input :content %>
-
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="actions">
+    <%= form.submit %>
   </div>
 <% end %>
