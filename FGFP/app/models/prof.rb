@@ -8,4 +8,5 @@ class Prof < ApplicationRecord
 has_attached_file :attach
 
   belongs_to :department
+  has_one :user
 end
