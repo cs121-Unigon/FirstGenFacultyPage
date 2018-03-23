@@ -8,44 +8,36 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
 <div class="navbar-item">
        <%= link_to "Testimonials", "testimonials", class:"navbar-item", style: "color:black" %>
      </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
   <div class="navbar-menu navbar-end" id="navbarMenu" >
-    <!-- navbar start, navbar end -->
-    <div class="navbar-item">
-      <%= link_to "Log In", "#", class:"button", style: "color:black" %>
-    </div>
 
-    <div class="navbar-item">
-      <%= link_to "Sign Up", new_path, class:"button", style: "color:black" %>
-    </div>
+    <!-- navbar start, navbar end -->
+    <div class="navbar-end">
+      <% if current_user %>
+
+          <div class="navbar-item">
+            Signed in as <strong><%= current_user.name %></strong>!
+            <%= link_to "Sign out", signout_path, id: "sign_out", class: "button", style: "color:black" %>
+          </div>
+      <% else %>
+          <div class="navbar-item">
+            <%= link_to "Log In", "/auth/google_oauth2", id: "sign_in", class: "button", style: "color:black" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "Sign Up", "/auth/google_oauth2", id: "sign_in", class: "button", style: "color:black" %>
+          </div>
+
+      <% end %>
 
     <div class="navbar-item">
       <%= link_to "About", "about", class:"button", style: "color:black" %>
     </div>
 
+   </div>
 
   </div>
 </nav>

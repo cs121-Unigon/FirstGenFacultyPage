@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2018-03-20 16:42:57
-  comment: MyText
+  content: MyText
 
 two:
-  date: 2018-03-20 16:42:57
-  comment: MyText
+  content: MyText

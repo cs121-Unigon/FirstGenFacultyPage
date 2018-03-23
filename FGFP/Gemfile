@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Allows sign-in with Google
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
+
+# Allows photo upload/display
 gem "paperclip", "~> 5.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,6 +44,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bulma-rails', '~> 0.6.2'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 gem 'devise', '~> 4.4', '>= 4.4.1'
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
