@@ -29,6 +29,7 @@ class ProfsController < ApplicationController
   # POST /profs.json
   def create
     @prof = Prof.new(prof_params)
+    @prof.user_id = current_user.id
     
     # Get a list of department so they can be in the dropdown menu
     #@departments = Departments.all
