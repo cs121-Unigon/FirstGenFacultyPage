@@ -44,6 +44,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bulma-rails', '~> 0.6.2'
 gem 'simple_form', '~> 3.5', '>= 3.5.1'
 gem 'devise', '~> 4.4', '>= 4.4.1'
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

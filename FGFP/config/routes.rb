@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-
+  resources :feedbacks
+  resources :profs
+  resources :departments
+  
   # added from a tutorial--may require more lines
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
@@ -11,8 +14,7 @@ Rails.application.routes.draw do
 
   get 'home/show'
 
-  resources :profs
-  resources :departments
+ 
 
   root 'profs#index'
   get '/index', to: 'profs#index'
