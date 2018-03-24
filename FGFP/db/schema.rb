@@ -9,6 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
 ActiveRecord::Schema.define(version: 20180320234257) do
   create_table "departments", force: :cascade do |t|
     t.string "name"
@@ -52,6 +53,13 @@ ActiveRecord::Schema.define(version: 20180320234257) do
     t.string "name"
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.datetime "date"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
