@@ -6,10 +6,6 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.new
   end
 
-  # GET /feedbacks/1/edit
-  def edit
-  end
-
   # POST /feedbacks
   # POST /feedbacks.json
   def create
