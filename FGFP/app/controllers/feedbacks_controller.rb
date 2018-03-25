@@ -14,7 +14,7 @@ class FeedbacksController < ApplicationController
     respond_to do |format|
       if @feedback.save
 		FeedbackMailer.feedback_email(@feedback).deliver_now!
-        format.html { redirect_to root_path, notice: 'Feedback was successfully sent.' }
+        format.html { redirect_to root_path, notice: 'Thank You For Sending Feedback!' }
       else
         format.html { render :new }
         format.json { render json: @feedback.errors, status: :unprocessable_entity }
