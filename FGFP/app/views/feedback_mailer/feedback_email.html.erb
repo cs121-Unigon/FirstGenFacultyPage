@@ -4,6 +4,6 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p><%= @feedback.content %></p>
+    <p><%= simple_format(@feedback.content) %></p>
   </body>
 </html>

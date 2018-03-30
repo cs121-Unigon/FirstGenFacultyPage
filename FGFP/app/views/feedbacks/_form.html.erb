@@ -1,6 +1,6 @@
 <div class="container">
   <p class="title">
-   Contact us here or by emailing OID directly!
+   Submit feedback here!
   </p>
   <%= form_with(model: feedback, local: true) do |form| %>
   <% if feedback.errors.any? %>
@@ -22,8 +22,19 @@
     <div class="tile is-12 is-parent">
       <div class="tile is-child">
         <div class="field">
-          <%= form.text_area :content, class: "textarea is-warning", placeholder: "Message"%>
+          <div class="control">
+            <label class="label">Feedback Type</label>
+            <div class="select">
+              <%= form.select :option, Feedback::OPTIONS
+              %>
+            </div>
           </div>
+        </div>
+        <div class="control">
+          <div class="field">
+            <%= form.text_area :content, class: "textarea is-warning", placeholder: "Content"%>
+          </div>
+        </div>
       </div>
     </div>
   </div>

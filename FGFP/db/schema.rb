@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320234257) do
+ActiveRecord::Schema.define(version: 20180330050348) do
+
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -21,6 +22,8 @@ ActiveRecord::Schema.define(version: 20180320234257) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
+    t.string "option"
   end
 
   create_table "profs", force: :cascade do |t|
@@ -53,13 +56,6 @@ ActiveRecord::Schema.define(version: 20180320234257) do
     t.string "name"
     t.string "oauth_token"
     t.datetime "oauth_expires_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "testimonials", force: :cascade do |t|
-    t.datetime "date"
-    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
