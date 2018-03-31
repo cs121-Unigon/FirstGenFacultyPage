@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/about', to: 'profs#about'
   get '/contact_us', to: 'feedbacks#new'
   get '/testimonials', to: 'testimonials#index'
+  get 'resources', to: 'resources#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "profs#index"
