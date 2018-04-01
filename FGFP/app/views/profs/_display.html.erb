@@ -1,56 +1,56 @@
 <div class="tile is-parent">
-	<article class="tile is-child notification is-warning">
-	  <p class="title">Faculty:</p>
-	  <div class="content">
-	    <!-- <article class="media box notification"> -->
-			<div class="media-content">
-				<% @profs.each do | prof | %>
-					<div class="box">
-						<article class="media">
-							<div class="media-top">
-								<div class="tile images">
-									<figure class="image is-64x64">
-										<%= image_tag prof.avatar.url %>
-									</figure>
-								</div>
-							</div>
-							<div class="media-content">
-								<div class="content">
-									<%= link_to(prof) do %>
-									  <strong><%= prof.name %></strong> 
-									<% end %>
-				 				</div>
-								<div class="content">
-									<small>Department: <%= prof.department.name %></small><br /> 
-									<small>Office: <%= prof.office %></small><br /> 
-									<small>email: <%= prof.email %></small><br /> 
-								</div>
+  <article class="tile is-child notification is-warning">
+    <p class="title">Faculty:</p>
+    <div class="content">
+      <!-- <article class="media box notification"> -->
+      <div class="media-content">
+        <% @profs.each do | prof | %>
+          <div class="box">
+            <article class="media">
+              <div class="media-top">
+                <div class="tile images">
+                  <figure class="image is-64x64">
+                    <%= image_tag prof.avatar.url %>
+                  </figure>
+                </div>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <%= link_to(prof) do %>
+                    <strong><%= prof.name %></strong> 
+                  <% end %>
+                 </div>
+                <div class="content">
+                  <small>Department: <%= prof.department.name %></small><br /> 
+                  <small>Office: <%= prof.office %></small><br /> 
+                  <small>email: <%= prof.email %></small><br /> 
+                </div>
 
 
-								<!-- not sure what this does -->
-								<nav class="level">
-									<div class="level-left is-mobile">
-										<%= link_to prof, class: "level-item" do %>
-											<span class="icon">
-												<i class="fa fa-link" aria-hidden="true"></i>
-											</span>
-										<% end %>
+                <!-- not sure what this does -->
+                <nav class="level">
+                  <div class="level-left is-mobile">
+                    <%= link_to prof, class: "level-item" do %>
+                      <span class="icon">
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                      </span>
+                    <% end %>
 
-									</div>
-								</nav>
+                  </div>
+                </nav>
 
 
-								
-								
-							</div> 
-						</article>
-					</div>
-				<% end %>
-			</div>
-		<!-- </article> -->
+                
+                
+              </div> 
+            </article>
+          </div>
+        <% end %>
+      </div>
+    <!-- </article> -->
 
-	  </div>
-	</article>
-	
+    </div>
+  </article>
+  
 </div>
   
