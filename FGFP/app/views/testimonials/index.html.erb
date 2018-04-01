@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-warning">
+            <p class="title">Here's what past participants have said:</p>
+            <div class="content">
+              <div class="media-content">
+              <% @testimonials.each do |testimonial| %>
+                <div class="box">
+                  <article class="media">
+                    <div class="media-top">
+                    </div>
+                    <div class="media-content">
+                      <div class="content">
+                        <med><%= testimonial.comment %></med><br />
+                      </div>
+                    </div> 
+                  </article>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <big><%= link_to 'Submit your testimonial here', new_testimonial_path %><big>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+

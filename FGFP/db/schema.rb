@@ -58,4 +58,11 @@ ActiveRecord::Schema.define(version: 20180320234257) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "testimonials", force: :cascade do |t|
+    t.datetime "date"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
