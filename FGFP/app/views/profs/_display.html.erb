@@ -21,10 +21,6 @@
                   <% end %>
                   
                  </div>
-                 <div>
-                    <%= if current_user.id == prof.user_id 
-                        link_to 'Edit', edit_prof_path(prof) else end %> 
-                 </div>
                 <div class="content">
                   <small>Department: <%= prof.department.name %></small><br /> 
                   <small>Office: <%= prof.office %></small><br /> 
