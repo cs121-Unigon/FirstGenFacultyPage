@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180402051533) do
 
+
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -29,6 +30,8 @@ ActiveRecord::Schema.define(version: 20180402051533) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
+    t.string "option"
   end
 
   create_table "profs", force: :cascade do |t|

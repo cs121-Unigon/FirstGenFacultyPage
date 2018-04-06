@@ -1,22 +1,46 @@
-<%= form_with(model: feedback, local: true) do |form| %>
+<div class="container">
+  <p class="title">
+   Submit any feedback here!
+  </p>
+  <%= form_with(model: feedback, local: true) do |form| %>
   <% if feedback.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this department from being saved:</h2>
+    <h2>
+      <%= pluralize(feedback.errors.count, "error") %> prohibited this department from being saved:
+    </h2>
 
-      <ul>
+    <ul>
       <% feedback.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li class="help is-danger">
+        <%= message %>
+      </li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="tile is-ancestor">
+    <div class="tile is-12 is-parent">
+      <div class="tile is-child">
+        <div class="field">
+          <div class="control">
+            <label class="label">Feedback Type</label>
+            <div class="select">
+              <%= form.select :option, Feedback::OPTIONS
+              %>
+            </div>
+          </div>
+        </div>
+        <div class="control">
+          <div class="field">
+            <%= form.text_area :content, class: "textarea is-warning", placeholder: "Content"%>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
+   
   <div class="actions">
-    <%= form.submit %>
+  <%= form.submit "Send", class:"button is-link"%>
   </div>
-<% end %>
+  <% end %>
+</div>
