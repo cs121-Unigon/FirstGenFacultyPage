@@ -3,6 +3,7 @@ class FeedbackMailer < ApplicationMailer
 
   def feedback_email(feedback)
 	@feedback = feedback
-	mail(to: ENV["to_email"], subject: "Feedback Posted")
+	subj = "FGFP: Feedback Posted: " + @feedback.option
+	mail(to: ENV["to_email"], subject: subj)
   end
 end
