@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="title">Gallery</h1>
+  <div class="columns is-multiline">
+    <% @photos.each do |photo| %>
+      <div class="column is-one-third is-vertical-center">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <%= image_tag photo.image.url, class:"no-margin"%>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= photo.description %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

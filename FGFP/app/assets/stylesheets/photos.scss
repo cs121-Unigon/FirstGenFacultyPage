@@ -1,0 +1,13 @@
+// Place all the styles related to the Photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.no-margin {
+    margin: 0px;
+    padding: 0px;
+    max-height: 400px;
+}
+
+.column.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
