@@ -3,18 +3,13 @@
   <div class="columns is-multiline">
     <% @photos.each do |photo| %>
       <div class="column is-one-third is-vertical-center">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <%= image_tag photo.image.url, class:"no-margin"%>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
+        <figure class="image center">
+          <%= image_tag photo.image.url, class:"no-margin img-border"%>
+            <figcaption>
               <%= photo.description %>
-            </div>
-          </div>
-        </div>
+
+            </figcaption>
+        </figure>
       </div>
     <% end %>
   </div>
