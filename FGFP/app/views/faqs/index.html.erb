@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-warning">
+            <p class="title">Some frequently asked questions:</p>
+            <div class="content">
+              <div class="media-content">
+                <% @faqs.each do |faq| %>
+                <div class="box">
+                  <article class="media">
+                    <div class="media-top">
+                    </div>
+                    <div class="media-content">
+                      <div class="content">
+                        <big><%= faq.question %></big><br />
+                      </div>
+                      <div class="content">
+                        <med><%= faq.answer %></med><br />
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <% end %>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-warning">
+            <p class="title">Have more questions?</p>
+            <div class="content">
+              <div class="media-content">
+                <p class="subtitle">Submit them here</p>
+                <%= link_to 'New Faq', new_faq_path %>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </section>

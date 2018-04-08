@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="title">
+    Add an FAQ
+  </h1>
+
+  <%= form_with(model: faq, local: true, html: { class: "container is-widescreen form" }) do |form| %>
+  <% if faq.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(faq.errors.count, "error") %> prohibited this faq from being saved:</h2>
+
+    <ul>
+      <% faq.errors.full_messages.each do |message| %>
+      <li class="help is-danger"><%= message%></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="tile is-ancestor">
+    <div class="tile is-12 is-parent">
+      <div class="tile is-child box notification is-warning">
+
+        <div class="field">
+          <%= form.label :question %>
+          <%= form.text_field :question, id: :faq_question, class: "input is-warning" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :answer %>
+          <%= form.text_field :answer, id: :faq_answer, class: "input is-warning" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <%= form.submit class: "button is-link" %>
+  </div>
+  <% end %>
+</div>

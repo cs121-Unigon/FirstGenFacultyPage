@@ -1,11 +1,19 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
+
     <%= link_to "Home", root_path, class:"navbar-item mentor-text", style: "color:black" %>
    
     <div class="navbar-burger burger"  id="nav-toggle" data-target="navbarMenu">
       <span></span>
       <span></span>
     </div>
+  </div>
+
+
+  
+
+  <div class="navbar-item">
+   <%= link_to "FAQs", "faqs", class:"navbar-item", style: "color:black" %>
   </div>
 
   <div class="navbar-menu navbar-end" id="navbarMenu" >
@@ -51,4 +59,3 @@
   }
   }
 </script>
-
