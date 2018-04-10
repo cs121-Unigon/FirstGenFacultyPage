@@ -1,5 +1,5 @@
 # Add configuration values here, as shown below.
-gmail_username: ""
-gmail_password: ""
-to_email : ""
-from_gmail : ""
+gmail_username: "testfgfp"
+gmail_password: "CS121Unigon"
+to_email : "testfgfp@gmail.com"
+from_gmail : "testfgfp@gmail.com"
