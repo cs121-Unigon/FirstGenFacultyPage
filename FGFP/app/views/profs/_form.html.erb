@@ -2,6 +2,7 @@
 	<h1 class="title">
 		Prof Sign Up
 	</h1>
+	<p> If you are not a Harvey Mudd College professor, please do not sign up to be a mentor for Project Decode.</p>
 	<%= form_with(model: prof, local: true, html: { class: "container is-widescreen form" }) do |form| %>
 	  <% if prof.errors.any? %>
 		<div id="error_explanation">
@@ -20,7 +21,13 @@
 		<div class="tile is-12 is-parent">
 			<div class="tile is-child box">
 				<div class="field">
-					<%= form.text_field :name, id: :prof_name, class: "input is-warning", placeholder: "Name"%>
+					<%= form.text_field :name, id: :prof_name, class: "input is-warning", placeholder: "First Name"%>
+				</div>
+				<div class="field">
+					<%= form.text_field :lastname, id: :prof_lastname, class: "input is-warning", placeholder: "Last Name"%>
+				</div>
+				<div class="field">
+					<%= form.text_field :pronouns, id: :prof_pronouns, class: "input is-warning", placeholder: "Pronouns"%>
 				</div>
 				<div class="field">
 					<%= form.text_field :email, id: :prof_email, class: "input is-warning", placeholder: "Email" %>
@@ -28,6 +35,9 @@
 
 				<div class="field">
 					<%= form.text_field :office, id: :prof_office, class: "input is-warning", placeholder: "Office" %>
+				</div>
+				<div class="field">
+					<%= form.text_field :hometown, id: :prof_hometown, class: "input is-warning", placeholder: "Hometown, Country" %>
 				</div>
 
 				<div class="field">
@@ -65,15 +75,37 @@
 		<div class="tile is-12 is-parent">
 			<div class="tile is-child box">
 				<div class="field">
-					<%= form.text_area :interests, id: :prof_interests, class: "textarea is-warning", placeholder: "Interests" %>
+					<%= form.text_area :interests, id: :prof_interests, class: "textarea is-warning", placeholder: "Share your interests!" %>
+				</div>
+				<div class="field">
+					<%= form.text_area :funfact, id: :prof_funfact, class: "textarea is-warning", placeholder: "Tell us a fun fact about yourself!" %>
+				</div>
+				<div class="field">
+					<%= form.text_area :lifestory, id: :prof_lifestory, class: "textarea is-warning", placeholder: "How did you get to this place in life?" %>
+				</div>
+				<div class="field">
+					<%= form.text_area :whymentor, id: :prof_whymentor, class: "textarea is-warning", placeholder: "Why do you want to be a mentor?" %>
 				</div>
 			</div>
 		</div>
 	  </div>
   
-	  <div class="actions">
-		<%= form.submit class: "button is-link" %>
-	  </div>
-	<% end %>
+	  <!-- Changed this into tiles becuase sometimes button gets hidden by footer -->
+	  			<div class="tile is-ancestor">
+	  			  <div class="tile is-vertical">
+	  			    <div class="tile">
+	  			      <div class="tile is-parent is-vertical">
+	  			        <article class="tile is-child notification is-white">
+	  			          <div class="actions has-text-centered">
+	  			           	<%= form.submit class: "button is-link" %>
+	  			          </div>
+	  			        </article>
+	  			        <article class="tile is-child notification is-white">
+	  			        </article>
+	  			      </div>
+	  			    </div>
+	  			  </div>
+	  			</div>
+	  	<% end %>
 
 </div>

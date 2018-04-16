@@ -2,37 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html, body, .container
-{
-    height: 100%; 
-    min-height: 100%;
-}
 
-img {
-    float: left;
-    width: 256px;
-    margin: 20px;
-}
-
-
-.header{
-    float: right;
-    background-color: hsl(48, 100%, 67%);
-    width: 1000px;
-    height: 192px;
-    margin: 20px; 
-    padding: 20px;
-}
-
-.description {
-    float: right;
-    width: 1306px;
-    height: 50%;
-    background-color: hsl(0, 0%, 96%);
-    padding: 20px;
-    margin: 20px; 
-
-}
 
 
 

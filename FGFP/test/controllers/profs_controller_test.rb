@@ -17,7 +17,17 @@ class ProfsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create prof" do
     assert_difference('Prof.count') do
-      post profs_url, params: { prof: { department_id: @prof.department_id, email: @prof.email, interests: @prof.interests, name: @prof.name, office: @prof.office } }
+      post profs_url, params: { prof: { department_id: @prof.department_id, 
+                                        email: @prof.email, 
+                                        interests: @prof.interests, 
+                                        funfact: @prof.funfact,
+                                        lifestory: @prof.lifestory, 
+                                        whymentor: @prof.whymentor, 
+                                        name: @prof.name, 
+                                        lastname: @prof.lastname, 
+                                        office: @prof.office, 
+                                        pronouns: @prof.pronouns, 
+                                        hometown: @prof.hometown } }
     end
 
     assert_redirected_to prof_url(Prof.last)
@@ -34,9 +44,19 @@ class ProfsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update prof" do
-    patch prof_url(@prof), params: { prof: { department_id: @prof.department_id, email: @prof.email, interests: @prof.interests, name: @prof.name, office: @prof.office } }
+    patch prof_url(@prof), params: { prof: { department_id: @prof.department_id, 
+                                             email: @prof.email, 
+                                             interests: @prof.interests, 
+                                             funfact: @prof.funfact,
+                                             lifestory: @prof.lifestory, 
+                                             whymentor: @prof.whymentor,
+                                             name: @prof.name, 
+                                             lastname: @prof.lastname, 
+                                             office: @prof.office, 
+                                             pronouns: @prof.pronouns, 
+                                             hometown: @prof.hometown } }
     assert_redirected_to prof_url(@prof)
-  end
+  en
 
   test "should destroy prof" do
     assert_difference('Prof.count', -1) do

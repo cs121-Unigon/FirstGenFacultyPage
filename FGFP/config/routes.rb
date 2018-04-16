@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   get '/index', to: 'profs#index'
   get '/new', to: 'profs#new'
   get '/show', to: 'profs#show'
-  get '/about', to: 'profs#about'
   get '/contact_us', to: 'feedbacks#new'
   get '/testimonials', to: 'testimonials#index'
   get '/faqs', to: 'faqs#index'

@@ -1,35 +1,94 @@
-<div class="container">
-  <div class="img">
-    <%= image_tag @prof.avatar.url %>
+<div class="tile is-ancestor">
+  <div class="tile is-child box">
+    <div class="tile is-vertical">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification is-light">
+            <figure class="image is-1by1">
+              <%= image_tag @prof.avatar.url %>
+            </figure>
+          </article>
+        </div>
+        <div class="tile is-parent is-9">
+          <article class="tile is-child notification is-dark">
+            <p class="title"><%= @prof.name %> <%= @prof.lastname %></p>
+              <div class="content">
+                <p class="subtitle">
+                  Pronouns: <%= @prof.pronouns %>
+                </p>
+                <p class="subtitle">
+                  Email: <%= @prof.email %>
+                </p>
+                <p class="subtitle">
+                  Department: <%= @prof.department.name %>
+                </p>
+                <p class="subtitle">
+                  Office: <%= @prof.office %>
+                </p>
+                <p class="subtitle">
+                  Hometown: <%= @prof.hometown %>
+                </p>
+              </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-warning">
+        <div class="content">
+          <p class="title">Interests</p>
+          <div class="content">
+            <div class="content">
+              <p> <%= @prof.interests %> </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-light">
+        <div class="content">
+          <p class="title">Fun Fact</p>
+          <div class="content">
+            <div class="content">
+              <p> <%= @prof.funfact %> </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-warning">
+        <div class="content">
+          <p class="title">How did I get to this place in my life?</p>
+          <div class="content">
+            <div class="content">
+              <p> <%= @prof.lifestory %> </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-light">
+          <div class="content">
+            <p class="title">Why do I want to be a mentor?</p>
+            <div class="content">
+              <div class="content">
+                <p> <%= @prof.whymentor%> </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+    <!-- This box is created so that last box is not hidden under footer -->
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-white">
+      </article>
+    </div>
   </div>
-  <div class="header">
-    <p class="subtitle">
-      <strong>Name:</strong>
-      <%= @prof.name %>
-    </p>
 
-    <p class="subtitle">
-      <strong>Email:</strong>
-      <%= @prof.email %>
-    </p>
-
-    <p class="subtitle">
-      <strong>Office:</strong>
-      <%= @prof.office %>
-    </p>
-
-  </div>
-
-  <div class="description">
-    <p class="subtitle">
-      <strong>Interests:</strong>
-      <%= @prof.interests %>
-    </p>
-
-    <p class="subtitle">
-      <strong>Department:</strong>
-      <%= @prof.department.name %>
-    </p>
-  </div>
-</div>​
-
+</div>
