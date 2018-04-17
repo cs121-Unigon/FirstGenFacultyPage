@@ -1,0 +1,52 @@
+<div class="container">
+  <h1 class="title">
+    Photo Upload
+  </h1>
+  <%= form_with(model: photo, local: true) do |form| %>
+  <% if photo.errors.any? %>
+		<div id="error_explanation">
+    <h2>
+      <%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:
+    </h2>
+      
+    <ul>
+      <% photo.errors.full_messages.each do |message| %>
+      <li class="help is-danger">
+        <%= message%>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+	<div class="tile is-ancestor">
+    <div class="tile is-3 is-parent">
+    </div>
+    <div class="tile is-6 is-parent">
+      <div class="tile is-child box">
+        <div class="field"  style="text-align: center">
+          <div class="file is-centered is-boxed is-large is-fullwidth is-warning">
+            <label class="file-label">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Drag Photo
+                </span>
+              </span>
+              <%= form.file_field :image%>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <%= form.text_field :description, class: "input is-warning", placeholder: "Photo Descrption"%>
+        </div>
+        <div class="actions">
+          <%= form.submit class: "button is-link" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+ 
   get 'faqs/new'
 
   get 'faqs/create'
@@ -18,6 +20,8 @@ Rails.application.routes.draw do
   resources :departments
   resources :testimonials
   resources :faqs
+  resources :resources
+  resources :photos
 
   # added from a tutorial--may require more lines
   get 'auth/:provider/callback', to: 'sessions#create'
@@ -35,7 +39,9 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'feedbacks#new'
   get '/testimonials', to: 'testimonials#index'
   get '/faqs', to: 'faqs#index'
-  get 'resources', to: 'resources#index'
+  get '/resources', to: 'resources#index'
+  get '/gallery', to: 'photos#index'
+  get '/gallery/new', to: 'photos#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

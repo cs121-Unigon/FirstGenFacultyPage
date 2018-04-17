@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="title">Gallery</h1>
+  <div class="columns is-multiline">
+    <% @photos.each do |photo| %>
+      <div class="column is-one-third is-vertical-center">
+        <figure class="image center">
+          <%= image_tag photo.image.url, class:"no-margin img-border"%>
+            <figcaption>
+              <%= photo.description %>
+
+            </figcaption>
+        </figure>
+      </div>
+    <% end %>
+  </div>
+</div>

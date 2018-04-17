@@ -1,16 +1,16 @@
 <div class="container">
   <p class="title">
-   Submit any feedback here!
+   Submit Resources here!
   </p>
-  <%= form_with(model: feedback, local: true) do |form| %>
-  <% if feedback.errors.any? %>
+  <%= form_with(model: resource, local: true) do |form| %>
+    <% if resource.errors.any? %>
     <div id="error_explanation">
     <h2>
-      <%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being sent:
+      <%= pluralize(resource.errors.count, "error") %> prohibited this resource from being saved:
     </h2>
 
     <ul>
-      <% feedback.errors.full_messages.each do |message| %>
+      <% resource.errors.full_messages.each do |message| %>
       <li class="help is-danger">
         <%= message %>
       </li>
@@ -23,16 +23,14 @@
       <div class="tile is-child">
         <div class="field">
           <div class="control">
-            <label class="label">Feedback Type</label>
-            <div class="select">
-              <%= form.select :option, Feedback::OPTIONS
-              %>
-            </div>
+            <div class="field">
+					<%= form.text_field :name, class: "input is-warning", placeholder: "Resource Name"%>
+		    </div>
           </div>
         </div>
         <div class="control">
           <div class="field">
-            <%= form.text_area :content, class: "textarea is-warning", placeholder: "Content"%>
+            <%= form.text_area :description, class: "textarea is-warning", placeholder: "Description"%>
           </div>
         </div>
       </div>
