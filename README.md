@@ -31,3 +31,13 @@ or
 ```
 rails s 
 ```
+## Known Problems
+Currently, if you go to the FAQ page, any user can create a question and answer which will automatically be shown on the page. Any user should not be able to do that, and we need to remove that functionality from the website since it should be part of admin privileges which only OID has. Secondly, if you got to the FAQ page by clicking the button on the header, then click "new FAQ" and click on the FAQ button on the header again, an error is thrown. 
+
+## Credits
+Contributors: Daksha Agarwal, Luis Hernandez Cruz, Chen Pekker, Nelll White 
+Client: Dean Zack Ritter, Diana Aguilar, OID
+CS121: Yekaterina Kharitonova
+
+## License
+See LICENSE.txt
