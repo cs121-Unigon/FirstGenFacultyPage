@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180402051533) do
-
+ActiveRecord::Schema.define(version: 20180416044108) do
 
   create_table "departments", force: :cascade do |t|
     t.string "name"
@@ -30,7 +29,6 @@ ActiveRecord::Schema.define(version: 20180402051533) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "type"
     t.string "option"
   end
 
@@ -47,6 +45,12 @@ ActiveRecord::Schema.define(version: 20180402051533) do
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer "user_id"
+    t.string "pronouns"
+    t.string "lastname"
+    t.string "hometown"
+    t.string "funfact"
+    t.string "lifestory"
+    t.string "whymentor"
     t.index ["department_id"], name: "index_profs_on_department_id"
     t.index ["user_id"], name: "index_profs_on_user_id"
   end

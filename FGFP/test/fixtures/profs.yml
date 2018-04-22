@@ -2,14 +2,27 @@
 
 one:
   name: MyString
+  lastname: MyString
+  pronouns: MyString
   email: MyString
   interests: MyText
+  funfact: MyText
+  whymentor: MyText
+  lifestory: MyText
   office: MyString
+  hometown: MyString
   department: one
 
 two:
   name: MyString
+  lastname: MyString
+  pronouns: MyString
   email: MyString
   interests: MyText
+  whymentor: MyText
+  lifestory: MyText
+  funfact: MyText
   office: MyString
+  hometown: MyString
   department: two
+

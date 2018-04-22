@@ -18,9 +18,6 @@ class ProfsController < ApplicationController
   def show
   end
 
-  def about 
-  end
-
   # GET /profs/new
   def new
     @prof = Prof.new
@@ -83,6 +80,6 @@ class ProfsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prof_params
-      params.require(:prof).permit(:name, :email, :interests, :office, :department_id, :avatar)
+      params.require(:prof).permit(:name, :lastname, :pronouns, :email, :interests, :whymentor, :lifestory, :funfact, :office, :hometown, :department_id, :avatar)
     end
 end
