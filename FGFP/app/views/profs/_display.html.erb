@@ -21,6 +21,10 @@
                   <% end %>
                   
                  </div>
+                  <% if prof.user_id == session[:user_id] then %>
+                    <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
+                  <% end %>
+                  
                 <div class="content">
                   <small>Department: <%= prof.department.name %></small><br /> 
                   <small>Office: <%= prof.office %></small><br /> 
