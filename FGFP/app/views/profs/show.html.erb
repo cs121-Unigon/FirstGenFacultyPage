@@ -83,6 +83,15 @@
         </article>
       </div>
 
+      <% if admin_signed_in? %>
+        <div class="box has-text-centered is-shadowless">
+          <button class="button is-info">
+            <%= link_to 'Edit', edit_prof_path(@prof), {:style=>'color:#FFFFFF;', :class => "css_class"}%>
+          </button>
+        </div>
+      <% end %>
+
+
 
     <!-- This box is created so that last box is not hidden under footer -->
     <div class="tile is-parent">
