@@ -1,6 +1,6 @@
 # FirstGenFacultyPage
 
-The First Gen project aims to connect first-generation college students and faculty. We will create a website where first-generation faculty can sign up using their HMC single sign-on, and create profiles including their picture, contact information, and any information about themselves and their interests they want to include. This website will be freely accessible on the internet, so that current as well as prospective first-generation studentscan get in contact with these professors.
+The First Gen project aims to connect first-generation college students and faculty. We created a website where first-generation faculty can sign up using their HMC single sign-on, and create profiles including their picture, contact information, and any information about themselves and their interests they want to include. This website will be accessible to current as well as prospective first-generation students.
 
 ## Architecture
 
