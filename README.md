@@ -1,6 +1,6 @@
 # FirstGenFacultyPage
 
-The First Gen project aims to connect first-generation college students and faculty. We have created a website where first-generation faculty can sign up using their HMC single sign-on, and create profiles including their picture, contact information, and any information about themselves and their interests they want to include. In the future, we hope this website will be freely accessible on the internet, so that current as well as prospective first-generation studentscan get in contact with these professors.
+The First Gen project aims to connect first-generation college students and faculty. We have created a website where first-generation faculty can sign up using their HMC single sign-on, and create profiles including their picture, contact information, and any information about themselves and their interests they want to include. In the future, we hope this website will be available on the internet via the Harvey Mudd website, so that current as well as prospective first-generation students can get in contact with these professors.
 
 ## Architecture
 
@@ -54,15 +54,15 @@ All users of this website will be associated with Harvey Mudd College. There are
 Each user can interact with the website differently, as shown in the use case diagram in Figure 1. Professors and OID can both see all the pages of the website that a student can. However, many of the features of the website are intended for students, so the associations in the diagram capture the intended usage rather than possible usage. \\
 
 
-![UnigonUseCaseDiagram.png](/images/UnigonCaseDiagram.png)
+![UnigonUseCaseDiagram.png](images/UnigonUseCaseDiagram.png)
 Use Case Diagram. This shows the intended usage of the website for each possible user. The dashed arrows denote that one task must happen before the other can (ie. a professor must log in before they can create a profile). The solid lines denote that the user is intended to use the feature.
 
 ### User Journey for Student
 #### Main Page
-The *Main Page* for the website, pictured in Figure 2, has some basic information about the website, and an overview of all professors who are currently signed up on the site. When a student clicks on the overview of a given professor, the page redirects to that professor's profile page.\\
+The *Main Page* for the website, pictured in Figure 2, has some basic information about the website, and an overview of all professors who are currently signed up on the site. When a student clicks on the overview of a given professor, the page redirects to that professor's profile page.
 
 
-![main-pageV2.png](/images/main-pageV2.png)
+![main-pageV2.png](images/main-pageV2.png)
 This is the *Main Page* of the website. It has a description of the website and a display of all the professors who have signed up for the site. The block labeled features will contain content that OID provides.
 
 #### Navigation Bar
@@ -73,9 +73,9 @@ The navigation bar, pictured in Figure 3, is located at the top of the website a
 The navigation bar, as can be seen from the *Main Page*
 
 #### Profile Page
-Each professor's *Profile Page*, an example of which can be seen in Figure 4, has an in-depth description that they have provided, including their picture, contact information, interests, and why they want to be a mentor. These pages allows the students to learn more about professors before contacting them. \\
+Each professor's *Profile Page*, an example of which can be seen in Figure 4, has an in-depth description that they have provided, including their picture, contact information, interests, and why they want to be a mentor. These pages allows the students to learn more about professors before contacting them. 
 
-![prof-page.png](/images/prof-page.png)
+![prof-page.png](images/Prof-page.png)
 This is the *Profile Page* for a professor that shows basic information about an individual professor.
 
 #### Testimonials
@@ -85,13 +85,13 @@ Students will be able to browse this page to find out more about the experiences
 An example testimonial
 
 \subsubsection{FAQs}
-Students can browse this page to read through some commonly asked questions and answers about the program. If a student wishes to submit a new question, they click the link at the bottom of the page, as seen in Figure 6, which redirects them to the *Contact Us* page, from which they can submit their question to OID.\\
+Students can browse this page to read through some commonly asked questions and answers about the program. If a student wishes to submit a new question, they click the link at the bottom of the page, as seen in Figure 6, which redirects them to the *Contact Us* page, from which they can submit their question to OID.
 
 ![Fdone.png](/images/Fdone.png)
 An example of an FAQ.
 
 #### Contact Us 
-Students will be able to submit feedback through the *Contact Us* page which contains a form. The form allows for five types of feedback to be submitted: "Testimonial," "Question," "Private," "Feedback," "Other." This is demonstrated in Figure 7. \\
+Students will be able to submit feedback through the *Contact Us* page which contains a form. The form allows for five types of feedback to be submitted: "Testimonial," "Question," "Private," "Feedback," "Other." This is demonstrated in Figure 7. 
 
 
 ![contact-us2.png](/images/contact-us2.png)
@@ -102,7 +102,7 @@ All types of feedback are sent to OID's email. Students can submit their testimo
 
 #### Resources
 
-The resources page has a number of resources intended for first-generation college students as seen in Figure 8. OID has provided links to resources they think would be valuable, including a number of scholarships for first-generation students. \\
+The resources page has a number of resources intended for first-generation college students as seen in Figure 8. OID has provided links to resources they think would be valuable, including a number of scholarships for first-generation students. 
 
 ![newR.png](/images/newR.png)
 Resources being displayed on the page
@@ -114,7 +114,7 @@ The professors are able to access all the website pages that are available to th
 % Google sign-in section sounds kinda architecture-y
 
 #### Form Page
-After signing in, the professor is directed to a form page, as can be seen in Figure 9, where they can enter all their information and upload a picture. \\
+After signing in, the professor is directed to a form page, as can be seen in Figure 9, where they can enter all their information and upload a picture. 
 
 
 ![prof-sign-up.png](/images/prof-sign-up.png)
@@ -127,21 +127,21 @@ Mentor sign-up for professors. The professor can either drag their picture into 
 OID will be able to access all the same pages that the students can, as well as some private forms used for maintaining the website. These forms are outlined below.
 
 #### Testimonial Form Page
-This form page will be accessed only by OID to create new testimonials which will be displayed on the site.\\
+This form page will be accessed only by OID to create new testimonials which will be displayed on the site.
 
 
 ![TForm.png](images/TForm.png)
 The form OID will use to create a new testimonial, as can be seen in Figure ???.
 
 #### FAQ Form Page
-This form page will be accessed only by OID to create new frequently asked questions and answers, which will be displayed on the site.\\
+This form page will be accessed only by OID to create new frequently asked questions and answers, which will be displayed on the site.
 
 ![FForm.png](/images/FForm.png)
 The form OID will use to create a new FAQ.
 
 
 #### Resources Form Page 
-This form page will be accessed only by OID to post new resources which will be displayed on the site. \\
+This form page will be accessed only by OID to post new resources which will be displayed on the site. 
 
 ![resources3.png](/images/resources3.png)
 Resources being displayed on the page
