@@ -16,6 +16,7 @@ This project uses Paperclip gem which requires ImageMagick and `file` command. I
 * Paperclip - Used for profile image uploading
 * Better Errors - Used to see more descriptive errors while in development mode
 * Omniauth Google Oauth2 - Used to allow professors to sign in with google
+* Devise - Used for admin interface sign-on
 
 ## Installation
 After prerequisites have been met, run the following commands:
