@@ -6,7 +6,7 @@ The First-Gen Faculty Page is a website created by team Unigon for first-generat
 
 ### Prerequisites
 ##### Ruby and Rails
-This project uses Rails 5.2 and Ruby 2.3
+This project uses Rails 5.2 and Ruby 2.3. Please ensure you have these versions of Ruby and Rails installed before you download our project. 
 
 #####  Image Processor and file
 This project uses Paperclip gem which requires ImageMagick and `file` command. Installation and configuration instructions found [here](https://github.com/thoughtbot/paperclip#requirements).
@@ -21,31 +21,16 @@ This project uses Paperclip gem which requires ImageMagick and `file` command. I
 ## Installation
 After prerequisites have been met, run the following commands:
 
-Download the repo from github by running in desired directory:
-```
-git clone <repo>
-```
-Navigate into your directory through terminal and install ruby gems by running the following command:
-```
-bundle install
-```
-Finally, finish setting up the environment by running the following commands:
-```
-rails db:migrate
-```
-```
-rails db:seed
-```
-In the ***config/application.yml*** file, add configuration values for website mailer to work. 
+1. Open terminal on your computer 
+2. Navigate to the directory where you would like to store the program
+3. Run the command ```git clone https://github.com/cs121-Unigon/FirstGenFacultyPage.git```
+4. Type ```cd FirstGenFacultyPage/FGFP``` to navigate to the correct directory 
+5. Type ```bundle install``` to install the necessary ruby gems 
+6. Set up the database by typing ```rails db:migrate``` 
+7. Populate the database by typing ```rails db:seed```
+8. In the ***FirstGenFacultyPage/FGFP/config/application.yml*** file, fill in required email credentials (gmail username, gmail password, email address sending the email and email address receiving the email) for website mailer to work
+9. Lastly, run ```rails server ``` or ```rails s ``` to launch the website on ***http://localhost:3000***
 
-Lastly, to launch the website, run:
-```
-rails server 
-```
-or
-```
-rails s 
-```
 
 ## Functionality
 
@@ -56,6 +41,7 @@ Each user can interact with the website differently, as shown in the use case di
 
 
 ![UnigonUseCaseDiagram.png](images/UnigonUseCaseDiagram.png)
+__Figure 1__
 Use Case Diagram. This shows the intended usage of the website for each possible user. The dashed arrows denote that one task must happen before the other can (ie. a professor must log in before they can create a profile). The solid lines denote that the user is intended to use the feature.
 
 ### User Journey for Student
@@ -64,6 +50,7 @@ The *Main Page* for the website, pictured in Figure 2, has some basic informatio
 
 
 ![main-pageV2.png](images/main-pageV2.png)
+__Figure 2__
 This is the *Main Page* of the website. It has a description of the website and a display of all the professors who have signed up for the site. The block labeled features will contain content that OID provides.
 
 #### Navigation Bar
@@ -71,24 +58,28 @@ The navigation bar, pictured in Figure 3, is located at the top of the website a
 
 
 ![navbar.jpg](/images/navbar.jpg)
+__Figure 3__
 The navigation bar, as can be seen from the *Main Page*
 
 #### Profile Page
 Each professor's *Profile Page*, an example of which can be seen in Figure 4, has an in-depth description that they have provided, including their picture, contact information, interests, and why they want to be a mentor. These pages allows the students to learn more about professors before contacting them. 
 
-![profile_Page.png](images/profile_Page.png)
+![prof-page.png](images/Prof-page.png)
+__Figure 4__
 This is the *Profile Page* for a professor that shows basic information about an individual professor.
 
 #### Testimonials
 Students will be able to browse this page to find out more about the experiences of past participants. If a student wishes to submit their own testimonial, they click the link at the bottom of the page, as can be seen in Figure 5, which redirects them to the *Contact Us* page, from which their testimonial will be sent to OID for approval before being posted on the *Testimonials* page by OID.
 
 ![Tdone.png](/images/Tdone.png)
+__Figure 5__
 An example testimonial
 
 #### FAQs
 Students can browse this page to read through some commonly asked questions and answers about the program. If a student wishes to submit a new question, they click the link at the bottom of the page, as seen in Figure 6, which redirects them to the *Contact Us* page, from which they can submit their question to OID.
 
 ![Fdone.png](/images/Fdone.png)
+__Figure 6__
 An example of an FAQ.
 
 #### Contact Us 
@@ -96,6 +87,7 @@ Students will be able to submit feedback through the *Contact Us* page which con
 
 
 ![contact-us2.png](/images/contact-us2.png)
+__FIgure 7__
 Contact Us form. The drop down menu allows for the selection of one type of feedback.
 
 All types of feedback are sent to OID's email. Students can submit their testimonials and questions through the "Testimonials" and "Questions" options. Students can submit private questions or information that a student might want to alert OID about through the "Private" option. Anything else should be submitted using the "Other" option. For example, a student might want to let OID know about a resource that is not currently listed using the "Other" option.
@@ -106,6 +98,7 @@ All types of feedback are sent to OID's email. Students can submit their testimo
 The resources page has a number of resources intended for first-generation college students as seen in Figure 8. OID has provided links to resources they think would be valuable, including a number of scholarships for first-generation students. 
 
 ![newR.png](/images/newR.png)
+__Figure 8__
 Resources being displayed on the page
 
 
@@ -119,30 +112,28 @@ After signing in, the professor is directed to a form page, as can be seen in Fi
 
 
 ![prof-sign-up.png](/images/prof-sign-up.png)
+__Figure 9__
 Mentor sign-up for professors. The professor can either drag their picture into the box or use the upload button. The actual image is not displayed on the page. All fields apart from the picture are required to be filled. The form page asks the user to  sign up to be a mentor only if they are an HMC professor. A professor is able to edit their profile after they have completed, in which case they are redirected back to this sign-up page. Note that the picture is cropped for readability.
 
 
 ### User Journey for Office of Institutional Diveristy
 
+% Add Admin privileges stuff
 OID will be able to access all the same pages that the students can, as well as some private forms used for maintaining the website. These forms are outlined below.
-
-#### Admin Login
-OID will be able to log in to an admin account using the admin login button, found next to the mentor login button. This will direct them to an admin login page, which can be seen in Figure 10. This gives them access to a version of the site with extra options to create testimonials, FAQs, and resources.
-
-![adminLoginPage.PNG](images/adminLoginPage.PNG)
-Admin login page. This allows OID to login to a version of the site with admin privileges.
 
 #### Testimonial Form Page
 This form page will be accessed only by OID to create new testimonials which will be displayed on the site.
 
 
 ![TForm.png](images/TForm.png)
+__Figure 10__
 The form OID will use to create a new testimonial, as can be seen in Figure ???.
 
 #### FAQ Form Page
 This form page will be accessed only by OID to create new frequently asked questions and answers, which will be displayed on the site.
 
 ![FForm.png](/images/FForm.png)
+__Figure 11__
 The form OID will use to create a new FAQ.
 
 
@@ -150,7 +141,8 @@ The form OID will use to create a new FAQ.
 This form page will be accessed only by OID to post new resources which will be displayed on the site. 
 
 ![resources3.png](/images/resources3.png)
-Resources being displayed on the page
+__Figure 12__
+Resources being displayed on the page.
 
 
 ## Known Problems
