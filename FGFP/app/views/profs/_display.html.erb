@@ -17,18 +17,18 @@
               <div class="media-content">
                 <div class="content">
                   <%= link_to(prof) do %>
-                    <strong><%= prof.name %> <%= prof.lastname %></strong> 
+                    <strong><%= prof.name %> <%= prof.lastname %></strong>
                   <% end %>
-                  
+
                  </div>
                   <% if prof.user_id == session[:user_id] then %>
                     <td><%= link_to 'Edit', edit_prof_path(prof) %></td>
                   <% end %>
-                  
+
                 <div class="content">
-                  <small>Department: <%= prof.department.name %></small><br /> 
-                  <small>Office: <%= prof.office %></small><br /> 
-                  <small>email: <%= prof.email %></small><br /> 
+                  <small>Department: <%= prof.department.name %></small><br />
+                  <small>Office: <%= prof.office %></small><br />
+                  <small>email: <%= prof.email %></small><br />
                 </div>
 
 
@@ -45,9 +45,9 @@
                 </nav>
 
 
-                
-                
-              </div> 
+
+
+              </div>
             </article>
           </div>
         <% end %>
@@ -56,6 +56,5 @@
 
     </div>
   </article>
-  
+
 </div>
-  
