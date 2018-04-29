@@ -43,7 +43,7 @@ All users of this website will be associated with Harvey Mudd College. There are
 The *Main Page* for the website, pictured in Figure 1, has some basic information about the website, and an overview of all professors who are currently signed up on the site. When a student clicks on the overview of a given professor, the page redirects to that professor's profile page.
 
 
-![main-pageV2.png](images/main-pageV2.png)
+![main-pageV3.png](images/main-pageV2.png)
 __Figure 1__
 This is the *Main Page* of the website. It has a description of the website and a display of all the professors who have signed up for the site. The block labeled features will contain content that OID provides.
 
@@ -51,7 +51,7 @@ This is the *Main Page* of the website. It has a description of the website and 
 The navigation bar, pictured in Figure 2, is located at the top of the website and is accessible throughout the whole website. The student can select the "Home" button to go to the *Main Page*. The rest of the buttons will redirect the student to the pages that are described in the following sections.
 
 
-![navbar.jpg](/images/navbar.jpg)
+![main-pageV3.png](/images/main-pageV3.png)
 __Figure 2__
 The navigation bar, as can be seen from the *Main Page*
 
@@ -84,8 +84,8 @@ Students will be able to submit feedback through the *Contact Us* page which con
 __Figure 6__
 Contact Us form. The drop down menu allows for the selection of one type of feedback.
 
-All types of feedback are sent to OID's email. Students can submit their testimonials and questions through the "Testimonials" and "Questions" options. Students can submit private questions or information that a student might want to alert OID about through the "Private" option. Anything else should be submitted using the "Other" option. For example, a student might want to let OID know about a resource that is not currently listed using the "Other" option.
-% We should mention the "Feedback option"
+All types of feedback are sent to OID's email. Students can submit their testimonials, feedback, and questions through the "Testimonials," "Feedback," and "Questions" options, respectively. Students can submit private questions or information that a student might want to alert OID about through the "Private" option. Anything else should be submitted using the "Other" option. For example, a student might want to let OID know about a resource that is not currently listed using the "Other" option.
+
 
 #### Resources
 
@@ -98,8 +98,8 @@ Resources being displayed on the page
 
 ### User Journey for Professor
  
-The professors are able to access all the website pages that are available to the student users. Harvey Mudd College professors that were first generation students can sign up to be a mentor to these students by using their HMC credentials. Since we are using Google sign-in, the professor can be assured that their email and password are safely stored. 
-% Google sign-in section sounds kinda architecture-y
+The professors are able to access all the website pages that are available to the student users. Harvey Mudd College professors that were first generation students can sign up to be a mentor to these students by using their HMC credentials. 
+
 
 #### Form Page
 After signing in, the professor is directed to a form page, as can be seen in Figure 8, where they can enter all their information and upload a picture. 
