@@ -16,6 +16,9 @@
                     <div class="media-content">
                       <div class="content">
                         <med><%= testimonial.comment %></med><br />
+                        <% if admin_signed_in? %>
+                        <%= link_to 'Edit', edit_testimonial_path(testimonial) %>
+                        <% end %>
                       </div>
                     </div>
                   </article>

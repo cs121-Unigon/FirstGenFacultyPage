@@ -1,3 +1,8 @@
 <%= render 'form', testimonial: @testimonial %>
 
-<%= link_to 'Back', testimonials_path %>
+<div class="box has-text-centered is-shadowless">
+  <button class="button is-info">
+    <%= link_to 'Back', testimonials_path, {:style=>'color:#FFFFFF;', :class => "css_class"}%>
+  </button>
+</div>
+
