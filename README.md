@@ -27,7 +27,7 @@ After prerequisites have been met, run the following commands:
 5. Type ```bundle install``` to install the necessary ruby gems 
 6. Set up the database by typing ```rails db:migrate``` 
 7. Populate the database by typing ```rails db:seed```
-8. In the ***FirstGenFacultyPage/FGFP/config/application.yml*** file, fill in required email credentails for website mailer to work
+8. In the ***FirstGenFacultyPage/FGFP/config/application.yml*** file, fill in required email credentials (gmail username, gmail password, email address sending the email and email address receiving the email) for website mailer to work
 9. Lastly, run ```rails server ``` or ```rails s ``` to launch the website in your local server 
 
 
