@@ -124,8 +124,13 @@ Mentor sign-up for professors. The professor can either drag their picture into 
 
 ### User Journey for Office of Institutional Diveristy
 
-% Add Admin privileges stuff
 OID will be able to access all the same pages that the students can, as well as some private forms used for maintaining the website. These forms are outlined below.
+
+#### Admin Login
+OID will be able to log in to an admin account using the admin login button, found next to the mentor login button. This will direct them to an admin login page, which can be seen in Figure 10. This gives them access to a version of the site with extra options to create testimonials, FAQs, and resources.
+
+![adminLoginPage.PNG](images/adminLoginPage.PNG)
+Admin login page. This allows OID to login to a version of the site with admin privileges.
 
 #### Testimonial Form Page
 This form page will be accessed only by OID to create new testimonials which will be displayed on the site.
