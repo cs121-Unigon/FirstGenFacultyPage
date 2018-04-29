@@ -52,7 +52,7 @@ rails s
 ### Users
 All users of this website will be associated with Harvey Mudd College. There are three possible users for this website: first-generation current or prospective students, first-generation professors, and the Office of Institutional Diversity (OID). The students do not need to make an account with the website. They interact with the website by viewing available professor mentors, submitting feedback, questions, or testimonials for the website and browsing through the resources available to first generation college students. Professors who were first generation college students can sign up to be mentors for the program. OID administers the website, keeps the resources up-to-date, and uploads any relevant testimonials or frequently asked questions. 
 
-Each user can interact with the website differently, as shown in the use case diagram in Figure 1. Professors and OID can both see all the pages of the website that a student can. However, many of the features of the website are intended for students, so the associations in the diagram capture the intended usage rather than possible usage. \\
+Each user can interact with the website differently, as shown in the use case diagram in Figure 1. Professors and OID can both see all the pages of the website that a student can. However, many of the features of the website are intended for students, so the associations in the diagram capture the intended usage rather than possible usage. 
 
 
 ![UnigonUseCaseDiagram.png](images/UnigonUseCaseDiagram.png)
@@ -67,7 +67,7 @@ The *Main Page* for the website, pictured in Figure 2, has some basic informatio
 This is the *Main Page* of the website. It has a description of the website and a display of all the professors who have signed up for the site. The block labeled features will contain content that OID provides.
 
 #### Navigation Bar
-The navigation bar, pictured in Figure 3, is located at the top of the website and is accessible throughout the whole website. The student can select the "Home" button to go to the *Main Page*. The rest of the buttons will redirect the student to the pages that are described in the following sections.\\
+The navigation bar, pictured in Figure 3, is located at the top of the website and is accessible throughout the whole website. The student can select the "Home" button to go to the *Main Page*. The rest of the buttons will redirect the student to the pages that are described in the following sections.
 
 
 ![navbar.jpg](/images/navbar.jpg)
@@ -80,12 +80,12 @@ Each professor's *Profile Page*, an example of which can be seen in Figure 4, ha
 This is the *Profile Page* for a professor that shows basic information about an individual professor.
 
 #### Testimonials
-Students will be able to browse this page to find out more about the experiences of past participants. If a student wishes to submit their own testimonial, they click the link at the bottom of the page, as can be seen in Figure 5, which redirects them to the *Contact Us* page, from which their testimonial will be sent to OID for approval before being posted on the *Testimonials* page by OID.\\
+Students will be able to browse this page to find out more about the experiences of past participants. If a student wishes to submit their own testimonial, they click the link at the bottom of the page, as can be seen in Figure 5, which redirects them to the *Contact Us* page, from which their testimonial will be sent to OID for approval before being posted on the *Testimonials* page by OID.
 
 ![Tdone.png](/images/Tdone.png)
 An example testimonial
 
-\subsubsection{FAQs}
+#### FAQs
 Students can browse this page to read through some commonly asked questions and answers about the program. If a student wishes to submit a new question, they click the link at the bottom of the page, as seen in Figure 6, which redirects them to the *Contact Us* page, from which they can submit their question to OID.
 
 ![Fdone.png](/images/Fdone.png)
@@ -159,8 +159,10 @@ Currently, if you go to the FAQ page, any user can create a question and answer 
 5. Submit a pull request
 
 ## Credits
-Contributors: Daksha Agarwal, Luis Hernandez Cruz, Chen Pekker, Nelll White 
+Contributors: Daksha Agarwal, Luis Hernandez Cruz, Chen Pekker, Nelll White
+
 Client: Dean Zack Ritter, Diana Aguilar, OID
+
 CS121: Yekaterina Kharitonova
 
 ## License
