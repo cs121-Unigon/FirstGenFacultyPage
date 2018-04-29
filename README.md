@@ -37,11 +37,6 @@ After prerequisites have been met, run the following commands:
 ### Users
 All users of this website will be associated with Harvey Mudd College. There are three possible users for this website: first-generation current or prospective students, first-generation professors, and the Office of Institutional Diversity (OID). The students do not need to make an account with the website. They interact with the website by viewing available professor mentors, submitting feedback, questions, or testimonials for the website and browsing through the resources available to first generation college students. Professors who were first generation college students can sign up to be mentors for the program. OID administers the website, keeps the resources up-to-date, and uploads any relevant testimonials or frequently asked questions. 
 
-Each user can interact with the website differently, as shown in the use case diagram in Figure 1. Professors and OID can both see all the pages of the website that a student can. However, many of the features of the website are intended for students, so the associations in the diagram capture the intended usage rather than possible usage. 
-
-
-![UnigonUseCaseDiagram.png](images/UnigonUseCaseDiagram.png)
-Use Case Diagram. This shows the intended usage of the website for each possible user. The dashed arrows denote that one task must happen before the other can (ie. a professor must log in before they can create a profile). The solid lines denote that the user is intended to use the feature.
 
 ### User Journey for Student
 #### Main Page
@@ -49,6 +44,7 @@ The *Main Page* for the website, pictured in Figure 2, has some basic informatio
 
 
 ![main-pageV2.png](images/main-pageV2.png)
+__Figure 1__
 This is the *Main Page* of the website. It has a description of the website and a display of all the professors who have signed up for the site. The block labeled features will contain content that OID provides.
 
 #### Navigation Bar
@@ -56,24 +52,28 @@ The navigation bar, pictured in Figure 3, is located at the top of the website a
 
 
 ![navbar.jpg](/images/navbar.jpg)
+__Figure 2__
 The navigation bar, as can be seen from the *Main Page*
 
 #### Profile Page
 Each professor's *Profile Page*, an example of which can be seen in Figure 4, has an in-depth description that they have provided, including their picture, contact information, interests, and why they want to be a mentor. These pages allows the students to learn more about professors before contacting them. 
 
-![prof-page.png](images/Prof-page.png)
+![profile_Page.png](images/profile_Page.png)
+__Figure 3__
 This is the *Profile Page* for a professor that shows basic information about an individual professor.
 
 #### Testimonials
 Students will be able to browse this page to find out more about the experiences of past participants. If a student wishes to submit their own testimonial, they click the link at the bottom of the page, as can be seen in Figure 5, which redirects them to the *Contact Us* page, from which their testimonial will be sent to OID for approval before being posted on the *Testimonials* page by OID.
 
 ![Tdone.png](/images/Tdone.png)
+__Figure 4__
 An example testimonial
 
 #### FAQs
 Students can browse this page to read through some commonly asked questions and answers about the program. If a student wishes to submit a new question, they click the link at the bottom of the page, as seen in Figure 6, which redirects them to the *Contact Us* page, from which they can submit their question to OID.
 
 ![Fdone.png](/images/Fdone.png)
+__Figure 5__
 An example of an FAQ.
 
 #### Contact Us 
@@ -81,6 +81,7 @@ Students will be able to submit feedback through the *Contact Us* page which con
 
 
 ![contact-us2.png](/images/contact-us2.png)
+__Figure 6__
 Contact Us form. The drop down menu allows for the selection of one type of feedback.
 
 All types of feedback are sent to OID's email. Students can submit their testimonials and questions through the "Testimonials" and "Questions" options. Students can submit private questions or information that a student might want to alert OID about through the "Private" option. Anything else should be submitted using the "Other" option. For example, a student might want to let OID know about a resource that is not currently listed using the "Other" option.
@@ -91,6 +92,7 @@ All types of feedback are sent to OID's email. Students can submit their testimo
 The resources page has a number of resources intended for first-generation college students as seen in Figure 8. OID has provided links to resources they think would be valuable, including a number of scholarships for first-generation students. 
 
 ![newR.png](/images/newR.png)
+__Figure 7__
 Resources being displayed on the page
 
 
@@ -104,25 +106,34 @@ After signing in, the professor is directed to a form page, as can be seen in Fi
 
 
 ![prof-sign-up.png](/images/prof-sign-up.png)
+__Figure 8__
 Mentor sign-up for professors. The professor can either drag their picture into the box or use the upload button. The actual image is not displayed on the page. All fields apart from the picture are required to be filled. The form page asks the user to  sign up to be a mentor only if they are an HMC professor. A professor is able to edit their profile after they have completed, in which case they are redirected back to this sign-up page. Note that the picture is cropped for readability.
 
 
 ### User Journey for Office of Institutional Diveristy
 
-% Add Admin privileges stuff
 OID will be able to access all the same pages that the students can, as well as some private forms used for maintaining the website. These forms are outlined below.
+
+#### Admin Login
+OID will be able to log in to an admin account using the admin login button, found next to the mentor login button. This will direct them to an admin login page, which can be seen in Figure 10. This gives them access to a version of the site with extra options to create testimonials, FAQs, and resources.
+
+![adminLoginPage.PNG](images/adminLoginPage.PNG)
+__Figure 9__
+Admin login page. This allows OID to login to a version of the site with admin privileges.
 
 #### Testimonial Form Page
 This form page will be accessed only by OID to create new testimonials which will be displayed on the site.
 
 
 ![TForm.png](images/TForm.png)
+__Figure 10__
 The form OID will use to create a new testimonial, as can be seen in Figure ???.
 
 #### FAQ Form Page
 This form page will be accessed only by OID to create new frequently asked questions and answers, which will be displayed on the site.
 
 ![FForm.png](/images/FForm.png)
+__Figure 11__
 The form OID will use to create a new FAQ.
 
 
@@ -130,6 +141,7 @@ The form OID will use to create a new FAQ.
 This form page will be accessed only by OID to post new resources which will be displayed on the site. 
 
 ![resources3.png](/images/resources3.png)
+__Figure 12__
 Resources being displayed on the page
 
 
