@@ -6,7 +6,7 @@ The First-Gen Faculty Page is a website created by team Unigon for first-generat
 
 ### Prerequisites
 ##### Ruby and Rails
-This project uses Rails 5.2 and Ruby 2.3
+This project uses Rails 5.2 and Ruby 2.3. Please ensure you have these versions of Ruby and Rails installed before you download our project. 
 
 #####  Image Processor and file
 This project uses Paperclip gem which requires ImageMagick and `file` command. Installation and configuration instructions found [here](https://github.com/thoughtbot/paperclip#requirements).
@@ -21,31 +21,16 @@ This project uses Paperclip gem which requires ImageMagick and `file` command. I
 ## Installation
 After prerequisites have been met, run the following commands:
 
-Download the repo from github by running in desired directory:
-```
-git clone <repo>
-```
-Navigate into your directory through terminal and install ruby gems by running the following command:
-```
-bundle install
-```
-Finally, finish setting up the environment by running the following commands:
-```
-rails db:migrate
-```
-```
-rails db:seed
-```
-In the ***config/application.yml*** file, add configuration values for website mailer to work. 
+1. Open terminal on your computer 
+2. Navigate to the directory where you would like to store the program
+3. Run the command ```git clone https://github.com/cs121-Unigon/FirstGenFacultyPage.git```
+4. Type ```cd FirstGenFacultyPage/FGFP``` to navigate to the correct directory 
+5. Type ```bundle install``` to install the necessary ruby gems 
+6. Set up the database by typing ```rails db:migrate``` 
+7. Populate the database by typing ```rails db:seed```
+8. In the ***FirstGenFacultyPage/FGFP/config/application.yml*** file, fill in required email credentials (gmail username, gmail password, email address sending the email and email address receiving the email) for website mailer to work
+9. Lastly, run ```rails server ``` or ```rails s ``` to launch the website on ***http://localhost:3000***
 
-Lastly, to launch the website, run:
-```
-rails server 
-```
-or
-```
-rails s 
-```
 
 ## Functionality
 
