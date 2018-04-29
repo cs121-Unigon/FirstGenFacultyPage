@@ -1,6 +1,6 @@
 # FirstGenFacultyPage
+The First-Gen Faculty Page is a website created by team Unigon for first-generation college students attending Harvey Mudd College. The website provides an easy way for first-generation students to find mentors among professors who were first-generation students themselves. The students simply have to browse our main page for a preview of all available mentors. Professors can sign up to be mentors in three simple steps: first they create an account with the website using their HMC single sign-on, then they fill out a few questions about themselves, and finally they upload a profile picture. Both professors and students can easily contact the administrators of the First Gen Faculty Page through our website.  
 
-The First Gen project aims to connect first-generation college students and faculty. We have created a website where first-generation faculty can sign up using their HMC single sign-on, and create profiles including their picture, contact information, and any information about themselves and their interests they want to include. In the future, we hope this website will be available on the internet via the Harvey Mudd website, so that current as well as prospective first-generation students can get in contact with these professors.
 
 ## Architecture
 
