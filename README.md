@@ -122,7 +122,7 @@ After signing in, the professor is directed to a form page, as can be seen in Fi
 Mentor sign-up for professors. The professor can either drag their picture into the box or use the upload button. The actual image is not displayed on the page. All fields apart from the picture are required to be filled. The form page asks the user to  sign up to be a mentor only if they are an HMC professor. A professor is able to edit their profile after they have completed, in which case they are redirected back to this sign-up page. Note that the picture is cropped for readability.
 
 
-### User Journey for OID
+### User Journey for Office of Institutional Diveristy
 
 % Add Admin privileges stuff
 OID will be able to access all the same pages that the students can, as well as some private forms used for maintaining the website. These forms are outlined below.
@@ -149,7 +149,7 @@ Resources being displayed on the page
 
 
 ## Known Problems
-Currently, if you go to the FAQ page, any user can create a question and answer which will automatically be shown on the page. Any user should not be able to do that, and we need to remove that functionality from the website since it should be part of admin privileges which only OID has. Secondly, if you got to the FAQ page by clicking the button on the header, then click "new FAQ" and click on the FAQ button on the header again, an error is thrown. 
+Currently, the admin privileges provided to the Office of Institutional Diveristy (OID) are limited to editing all mentor profiles, adding new testimonials and adding new FAQs to the website. However, the administrator is not able to delete any mentor profiles, add new resources or update the overview of the program without touching our codebase.
 
 ## Contributing
 1. Fork it!
