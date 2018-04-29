@@ -85,7 +85,7 @@ __Figure 6__
 Contact Us form. The drop down menu allows for the selection of one type of feedback.
 
 All types of feedback are sent to OID's email. Students can submit their testimonials and questions through the "Testimonials" and "Questions" options. Students can submit private questions or information that a student might want to alert OID about through the "Private" option. Anything else should be submitted using the "Other" option. For example, a student might want to let OID know about a resource that is not currently listed using the "Other" option.
-% We should mention the "Feedback option"
+
 
 #### Resources
 
@@ -99,7 +99,7 @@ Resources being displayed on the page
 ### User Journey for Professor
  
 The professors are able to access all the website pages that are available to the student users. Harvey Mudd College professors that were first generation students can sign up to be a mentor to these students by using their HMC credentials. Since we are using Google sign-in, the professor can be assured that their email and password are safely stored. 
-% Google sign-in section sounds kinda architecture-y
+
 
 #### Form Page
 After signing in, the professor is directed to a form page, as can be seen in Figure 8, where they can enter all their information and upload a picture. 
