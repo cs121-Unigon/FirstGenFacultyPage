@@ -76,7 +76,7 @@ The navigation bar, as can be seen from the *Main Page*
 #### Profile Page
 Each professor's *Profile Page*, an example of which can be seen in Figure 4, has an in-depth description that they have provided, including their picture, contact information, interests, and why they want to be a mentor. These pages allows the students to learn more about professors before contacting them. 
 
-![prof-page.png](images/Prof-page.png)
+![profile_Page.png](images/profile_Page.png)
 This is the *Profile Page* for a professor that shows basic information about an individual professor.
 
 #### Testimonials
