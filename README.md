@@ -58,7 +58,7 @@ All users of this website will be associated with Harvey Mudd College. There are
 The *Main Page* for the website, pictured in Figure 2, has some basic information about the website, and an overview of all professors who are currently signed up on the site. When a student clicks on the overview of a given professor, the page redirects to that professor's profile page.
 
 
-![main-pageV2.png](images/main-pageV2.png)
+![main-pageV3.png](images/main-pageV3.png)
 __Figure 1__
 This is the *Main Page* of the website. It has a description of the website and a display of all the professors who have signed up for the site. The block labeled features will contain content that OID provides.
 
